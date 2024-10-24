@@ -84,5 +84,5 @@
 		}
 	},
 	// Adicionando comando para instalar o pip e dependências
-	"postCreateCommand": "python3 -m ensurepip --upgrade && pip3 install --upgrade pip && if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi"
+	"postCreateCommand": "curl -sSL https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python3 get-pip.py && rm get-pip.py && pip install --upgrade pip && if [ -f requirements.txt ]; then pip install -r requirements.txt; fi"
 }
