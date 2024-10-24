@@ -82,5 +82,7 @@
 				"znck.grammarly"
 			]
 		}
-	}
+	},
+	// Adicionando comando para instalar o pip e dependências
+	"postCreateCommand": "python3 -m ensurepip --upgrade && pip3 install --upgrade pip && if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi"
 }
